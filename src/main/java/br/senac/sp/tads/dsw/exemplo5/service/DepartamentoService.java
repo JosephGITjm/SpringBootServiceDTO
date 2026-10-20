@@ -17,11 +17,13 @@ import jakarta.validation.Valid;
 @Service 
 public class DepartamentoService {
     
+    // INGEÇÃO DE DEPENDÊNCIAS
     private final DepartamentoRepository repository;
 
     public DepartamentoService(DepartamentoRepository repository) {
         this.repository = repository;
     }
+    // ----
 
     public List<DepartamentoResponseDTO> listarTodos() {
         return repository.findAll()
